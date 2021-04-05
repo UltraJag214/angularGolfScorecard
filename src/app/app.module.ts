@@ -7,10 +7,12 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CourseSelectComponent } from './components/course-select/course-select.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CourseSelectComponent
   ],
   imports: [
     BrowserModule,
