@@ -9,14 +9,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CourseSelectComponent } from './components/course-select/course-select.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from './modules/material.module';
+import { ScorecardComponent } from './components/scorecard/scorecard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseSelectComponent,
-    NavBarComponent
+    NavBarComponent,
+    ScorecardComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
