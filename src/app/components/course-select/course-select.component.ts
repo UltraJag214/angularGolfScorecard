@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MapServiceService } from '../../services/map-service.service';
+
 
 @Component({
   selector: 'app-course-select',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseSelectComponent implements OnInit {
 
-  constructor() { }
+  courses = [];
+
+  constructor(private mapService: MapServiceService) { }
 
   ngOnInit(): void {
+    this.mapService.getCourseData().subscribe((data: any[]) => {
+      this.courses = data;
+    });
   }
 
 }
