@@ -2,7 +2,7 @@
 <mat-card class="course-select" *ngFor="let object of courses | keyvalue">
     <div class="courses" *ngFor="let course of object.value">
         <img
-            [routerLink]="['/settings/', course.id]"
+            [routerLink]="['/data/', course.id]"
             src={{course.image}}
             alt={{course.name}}
         >

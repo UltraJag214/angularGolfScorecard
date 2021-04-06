@@ -15,6 +15,7 @@ import { ScorecardComponent } from './components/scorecard/scorecard.component';
 import { CellComponent } from './components/cell/cell.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { CourseDataComponent } from './components/course-data/course-data.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     CourseSelectComponent,
     NavBarComponent,
     ScorecardComponent,
-    CellComponent
+    CellComponent,
+    CourseDataComponent
   ],
   imports: [
     BrowserModule,
