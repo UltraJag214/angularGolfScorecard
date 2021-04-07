@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseDataService } from '../../services/course-data.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-course-data',
@@ -8,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./course-data.component.scss']
 })
 export class CourseDataComponent implements OnInit {
+  courseData;
 
   constructor() { }
 

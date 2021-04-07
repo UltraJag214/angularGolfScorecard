@@ -1,0 +1,46 @@
+.spacer10 {
+    margin: 10px 0;
+}
+
+.spacer5 {
+    margin: 5px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #839b97;
+}
+
+label {
+    color: #34626c;
+}
+
+.text-center {
+    border: solid 1px black;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.white {
+    background-color: white;
+}
+
+#courseName {
+    text-align: center;
+    color: #839b97;
+}
+
+.wrap {
+    display: flex;
+
+}
+
+input {
+    background-color: #cfd3ce;
+    outline: none;
+    border: solid 1px black;
+}
+
+.hide {
+    display: none;
+}
