@@ -6,10 +6,10 @@ import { CourseSelectComponent } from '../components/course-select/course-select
 import { CourseDataComponent } from '../components/course-data/course-data.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'courses', pathMatch: 'full' },
-  // { path: 'courses', component: CourseSelectComponent },
-  // { path: 'data/:id', component: CourseDataComponent },
-  // { path: 'scorecard/:id', component: ScorecardComponent }
+  { path: '', redirectTo: 'courses', pathMatch: 'full' },
+  { path: 'courses', component: CourseSelectComponent },
+  { path: 'data/:id', component: CourseDataComponent },
+  { path: 'scorecard/:id', component: ScorecardComponent }
 ];
 
 @NgModule({
