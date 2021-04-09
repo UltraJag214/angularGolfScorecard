@@ -42,7 +42,6 @@ export class CourseDataComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(this.matFormGroup)
     this.savedDataService.savedData = this.matFormGroup.value;
   }
 

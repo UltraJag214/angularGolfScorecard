@@ -52,6 +52,7 @@
             type="submit" 
             [routerLink]="['/scorecard/', courseId]"
             (click)="onSubmit()"
+            [disabled]="!matFormGroup.valid"
             >
                 Play Game!
             </button>
