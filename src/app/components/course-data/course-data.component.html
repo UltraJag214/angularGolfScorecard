@@ -1,56 +1,64 @@
 <h1 class="center">Course & Player Settings</h1>
-<mat-card>
-    <h2>Course Name Here</h2>
-    <div class="flex">
-        <mat-form-field class='right-side'>
-            <h3>Enter Player Name(s) Here!</h3>
-            <div class="playerList">
-                <section>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Player1">
-                    </mat-form-field>
-                </section>
-                <section>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Player2">
-                    </mat-form-field>
-                </section>
-                <section>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Player3">
-                    </mat-form-field>
-                </section>
-                <section>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Player4">
-                    </mat-form-field>
-                </section>
+<mat-card *ngIf="courseData">
+    <h2>{{ courseData.data.name }}</h2>
+    <form [formGroup]="matFormGroup" (ngSubmit)="onSubmit()" novalidate>
+        <div class="flex">
+            <div class='right-side'>
+                <h3>Enter Player Name(s) Here!</h3>
+                <div class="playerList">
+                    <section>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Player1" formControlName="player1">
+                        </mat-form-field>
+                    </section>
+                    <section>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Player2" formControlName="player2">
+                        </mat-form-field>
+                    </section>
+                    <section>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Player3" formControlName="player3">
+                        </mat-form-field>
+                    </section>
+                    <section>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Player4" formControlName="player4">
+                        </mat-form-field>
+                    </section>
+                </div>
+                <h3>Select Course Settings Here!</h3>
+                <div class="courseSettings">
+                    <section>
+                        <mat-form-field appearance='fill'>
+                            <mat-label>Teebox!</mat-label>
+                            <mat-select formControlName="teebox" required>
+                                <mat-option>-=-=-</mat-option>
+                                <mat-option *ngFor="let teeBox of courseData.data.holes[0].teeBoxes"
+                                    [value]="teeBox.teeTypeId">
+                                    {{ teeBox.teeType }}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error>
+                                Teebox needs to be specified
+                            </mat-error>
+                        </mat-form-field>
+                    </section>
+                </div>
             </div>
-            <h3>Select Course Settings Here!</h3>
-            <div class="courseSettings">
-                <section>
-                    <mat-label>Teebox!</mat-label>
-                    <mat-option></mat-option>
-                    <mat-error>
-                        Teebox needs to be specified
-                    </mat-error>
-                </section>
-                <section>
-                    <mat-label>Holes!</mat-label>
-                    <mat-option></mat-option>
-                    <mat-error>
-                        Amount of holes needs to be declared
-                    </mat-error>
-                </section>
-            </div>
-        </mat-form-field>
-    </div>
-    <div class="flexButton">
-        <button 
-            mat-button
-            
+        </div>
+        <div class="flexButton">
+            <button mat-button 
+            type="submit" 
+            [routerLink]="['/scorecard/', courseId]"
+            (click)="onSubmit()"
             >
-            Play Game!
-        </button>
-    </div>
+                Play Game!
+            </button>
+        </div>
+    </form>
 </mat-card>
+
+
+<!-- [routerLink]="['/scorecard/', courseId]" 
+(click)="noDuplicates()"-->

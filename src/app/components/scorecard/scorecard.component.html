@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card *ngIf="courseData">
     <h1 class="center">ScoreCard!</h1>
     <section>
         <div id="golf-card">
@@ -19,41 +19,41 @@
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center">YARDS</div>
-                    <div class="col-1 text-center" id="yards0"></div>
-                    <div class="col-1 text-center" id="yards1"></div>
-                    <div class="col-1 text-center" id="yards2"></div>
-                    <div class="col-1 text-center" id="yards3"></div>
-                    <div class="col-1 text-center" id="yards4"></div>
-                    <div class="col-1 text-center" id="yards5"></div>
-                    <div class="col-1 text-center" id="yards6"></div>
-                    <div class="col-1 text-center" id="yards7"></div>
-                    <div class="col-1 text-center" id="yards8"></div>
+                    <div class="col-1 text-center" id="yards0">{{ courseData.data.holes[0].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards1">{{ courseData.data.holes[1].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards2">{{ courseData.data.holes[2].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards3">{{ courseData.data.holes[3].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards4">{{ courseData.data.holes[4].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards5">{{ courseData.data.holes[5].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards6">{{ courseData.data.holes[6].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards7">{{ courseData.data.holes[7].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards8">{{ courseData.data.holes[8].teeBoxes[teebox].yards }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center"> HDCP</div>
-                    <div class="col-1 text-center" id="hcp0"></div>
-                    <div class="col-1 text-center" id="hcp1"></div>
-                    <div class="col-1 text-center" id="hcp2"></div>
-                    <div class="col-1 text-center" id="hcp3"></div>
-                    <div class="col-1 text-center" id="hcp4"></div>
-                    <div class="col-1 text-center" id="hcp5"></div>
-                    <div class="col-1 text-center" id="hcp6"></div>
-                    <div class="col-1 text-center" id="hcp7"></div>
-                    <div class="col-1 text-center" id="hcp8"></div>
+                    <div class="col-1 text-center" id="hcp0">{{ courseData.data.holes[0].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp1">{{ courseData.data.holes[1].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp2">{{ courseData.data.holes[2].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp3">{{ courseData.data.holes[3].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp4">{{ courseData.data.holes[4].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp5">{{ courseData.data.holes[5].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp6">{{ courseData.data.holes[6].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp7">{{ courseData.data.holes[7].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp8">{{ courseData.data.holes[8].teeBoxes[teebox].hcp }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center">PAR</div>
-                    <div class="col-1 text-center parItems" id="par0"></div>
-                    <div class="col-1 text-center parItems" id="par1"></div>
-                    <div class="col-1 text-center parItems" id="par2"></div>
-                    <div class="col-1 text-center parItems" id="par3"></div>
-                    <div class="col-1 text-center parItems" id="par4"></div>
-                    <div class="col-1 text-center parItems" id="par5"></div>
-                    <div class="col-1 text-center parItems" id="par6"></div>
-                    <div class="col-1 text-center parItems" id="par7"></div>
-                    <div class="col-1 text-center parItems" id="par8"></div>
+                    <div class="col-1 text-center parItems" id="par0">{{ courseData.data.holes[0].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par1">{{ courseData.data.holes[1].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par2">{{ courseData.data.holes[2].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par3">{{ courseData.data.holes[3].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par4">{{ courseData.data.holes[4].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par5">{{ courseData.data.holes[5].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par6">{{ courseData.data.holes[6].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par7">{{ courseData.data.holes[7].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par8">{{ courseData.data.holes[8].teeBoxes[teebox].par }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div id="player0-0" class="row hide ml-3">
@@ -69,8 +69,8 @@
                     <input id="player0Score8" type="number" class="col-1 text-center player0-0">
                     <div id="player0Total0" class="col-1 text-center"></div>
                 </div>
-                <div id="player1-0" class="row hide ml-3">
-                    <div id="playerName1-0" class="col-1 text-center"></div>
+                <div id="player1-0" class="row hide ml-3"  *ngFor="let player of players">
+                    <div id="playerName1-0" class="col-1 text-center">{{ player.name }}</div>
                     <input id="player1Score0" type="number" class="col-1 text-center player1-0">
                     <input id="player1Score1" type="number" class="col-1 text-center player1-0">
                     <input id="player1Score2" type="number" class="col-1 text-center player1-0">
@@ -127,41 +127,41 @@
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center">YARDS</div>
-                    <div class="col-1 text-center" id="yards9"></div>
-                    <div class="col-1 text-center" id="yards10"></div>
-                    <div class="col-1 text-center" id="yards11"></div>
-                    <div class="col-1 text-center" id="yards12"></div>
-                    <div class="col-1 text-center" id="yards13"></div>
-                    <div class="col-1 text-center" id="yards14"></div>
-                    <div class="col-1 text-center" id="yards15"></div>
-                    <div class="col-1 text-center" id="yards16"></div>
-                    <div class="col-1 text-center" id="yards17"></div>
+                    <div class="col-1 text-center" id="yards9">{{ courseData.data.holes[9].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards10">{{ courseData.data.holes[10].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards11">{{ courseData.data.holes[11].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards12">{{ courseData.data.holes[12].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards13">{{ courseData.data.holes[13].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards14">{{ courseData.data.holes[14].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards15">{{ courseData.data.holes[15].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards16">{{ courseData.data.holes[16].teeBoxes[teebox].yards }}</div>
+                    <div class="col-1 text-center" id="yards17">{{ courseData.data.holes[17].teeBoxes[teebox].yards }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center"> HDCP</div>
-                    <div class="col-1 text-center" id="hcp9"></div>
-                    <div class="col-1 text-center" id="hcp10"></div>
-                    <div class="col-1 text-center" id="hcp11"></div>
-                    <div class="col-1 text-center" id="hcp12"></div>
-                    <div class="col-1 text-center" id="hcp13"></div>
-                    <div class="col-1 text-center" id="hcp14"></div>
-                    <div class="col-1 text-center" id="hcp15"></div>
-                    <div class="col-1 text-center" id="hcp16"></div>
-                    <div class="col-1 text-center" id="hcp17"></div>
+                    <div class="col-1 text-center" id="hcp9">{{ courseData.data.holes[9].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp10">{{ courseData.data.holes[10].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp11">{{ courseData.data.holes[11].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp12">{{ courseData.data.holes[12].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp13">{{ courseData.data.holes[13].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp14">{{ courseData.data.holes[14].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp15">{{ courseData.data.holes[15].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp16">{{ courseData.data.holes[16].teeBoxes[teebox].hcp }}</div>
+                    <div class="col-1 text-center" id="hcp17">{{ courseData.data.holes[17].teeBoxes[teebox].hcp }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div class="row ml-3">
                     <div class="col-1 text-center">PAR</div>
-                    <div class="col-1 text-center parItems" id="par9"></div>
-                    <div class="col-1 text-center parItems" id="par10"></div>
-                    <div class="col-1 text-center parItems" id="par11"></div>
-                    <div class="col-1 text-center parItems" id="par12"></div>
-                    <div class="col-1 text-center parItems" id="par13"></div>
-                    <div class="col-1 text-center parItems" id="par14"></div>
-                    <div class="col-1 text-center parItems" id="par15"></div>
-                    <div class="col-1 text-center parItems" id="par16"></div>
-                    <div class="col-1 text-center parItems" id="par17"></div>
+                    <div class="col-1 text-center parItems" id="par9">{{ courseData.data.holes[9].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par10">{{ courseData.data.holes[10].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par11">{{ courseData.data.holes[11].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par12">{{ courseData.data.holes[12].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par13">{{ courseData.data.holes[13].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par14">{{ courseData.data.holes[14].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par15">{{ courseData.data.holes[15].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par16">{{ courseData.data.holes[16].teeBoxes[teebox].par }}</div>
+                    <div class="col-1 text-center parItems" id="par17">{{ courseData.data.holes[17].teeBoxes[teebox].par }}</div>
                     <div class="col-1 text-center"></div>
                 </div>
                 <div id="player0-1" class="row hide ml-3">
