@@ -167,12 +167,14 @@
                 <div class="row ml-3">
                     <div class="col-1 text-center">Name</div>
                     <div class="col-1 text-center">Total</div>
+                    <div class="col-1 text-center">Par</div>
                     <div class="col-2 text-center">Outcome</div>
                 </div>
                 <div class="row ml-3" *ngFor="let player of players">
                     <div class="col-1 text-center">{{ player.name }}</div>
                     <div class="col-1 text-center">{{ getTotal(player) }}</div>
-                    <div class="col-2 text-center"></div>
+                    <div class="col-1 text-center">{{ getTotalPar(player) }}</div>
+                    <div class="col-2 text-center">{{ getEndResult(player) }}</div>
                 </div>
             </div>
             <br>

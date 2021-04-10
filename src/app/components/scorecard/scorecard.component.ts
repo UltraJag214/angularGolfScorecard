@@ -13,6 +13,7 @@ export class ScorecardComponent implements OnInit {
   courseId: string;
   courseData;
   teebox;
+  endResult;
   players: Player[] = [];
 
   holes: string[] = ['hole1', 'hole2', 'hole3', 'hole4', 'hole5', 'hole6', 'hole7', 'hole8', 'hole9', 'hole10', 'hole11', 'hole12', 'hole13', 'hole14', 'hole15', 'hole16', 'hole17', 'hole18'];
@@ -132,16 +133,15 @@ export class ScorecardComponent implements OnInit {
       })
     }
 
-
-
+    
     
 
-    console.log(this.savedDataService.savedData);
+    // console.log(this.savedDataService.savedData);
 
   }
 
   getTotalOut(player: Player): number {
-    console.log(player);
+    // console.log(player);
     return player.hole1 + player.hole2 + player.hole3 + player.hole4 + player.hole5 + player.hole6 + player.hole7 + player.hole8 + player.hole9;
   }
 
@@ -152,4 +152,26 @@ export class ScorecardComponent implements OnInit {
   getTotal(player: Player): number {
     return player.hole1 + player.hole2 + player.hole3 + player.hole4 + player.hole5 + player.hole6 + player.hole7 + player.hole8 + player.hole9 + player.hole10 + player.hole11 + player.hole12 + player.hole13 + player.hole14 + player.hole15 + player.hole16 + player.hole17 + player.hole18;
   }
+
+  getTotalPar(): number {
+    let holesArr = this.courseData.data.holes;
+    let totalPar = 0;
+    for (let i = 0; i < holesArr.length; i++) {
+      totalPar += holesArr[i].teeBoxes[this.teebox].par;
+    }
+    return totalPar;
+  }
+
+  getEndResult(player: Player): string  {
+    if (this.getTotal(player) >= this.getTotalPar()) {
+      this.endResult = "You Suck!"
+    } else if (this.getTotal(player) === this.getTotalPar()) {
+      this.endResult = "Right On Par"
+    } else {
+      this.endResult = "On to the PGA!"
+    }
+    return this.endResult;
+    console.log(this.endResult);
+  }
+
 }
